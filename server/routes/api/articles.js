@@ -1,5 +1,5 @@
 var router = require('express').Router();
-var mongoose = require('../../config/mongoose');
+var mongoose = require('mongoose');
 var Article = mongoose.model('Article');
 var Comment = mongoose.model('Comment');
 var User = mongoose.model('User');

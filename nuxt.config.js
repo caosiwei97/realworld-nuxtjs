@@ -1,6 +1,9 @@
 export default {
   env: {
-    API_BASE_URL: 'http://localhost:3001',
+    API_BASE_URL:
+      process.env.NODE_ENV === 'production'
+        ? 'http://113.31.147.162:3001'
+        : 'http://localhost:3001',
   },
 
   router: {
@@ -72,12 +75,4 @@ export default {
   },
 
   plugins: ['~/plugins/axios.js', '~/plugins/dayjs.js'],
-
-  // ! 有坑
-  // serverMiddleware: [
-  //   {
-  //     path: '/api',
-  //     handler: '~/server/app.js',
-  //   },
-  // ],
 }

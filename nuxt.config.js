@@ -1,6 +1,6 @@
 export default {
   env: {
-    API_BASE_URL: 'http://localhost:3001',
+    API_BASE_URL: 'http://113.31.147.162:3001',
   },
 
   router: {
